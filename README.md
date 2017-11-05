@@ -8,9 +8,9 @@
 ```
 ## Nodes
 ```javascript
-    var nodeA = new ProblemMapGenerator.Node('A', new ProblemMapGenerator.Point(0, 0), new ProblemMapGenerator.Point(0, 0));
-    var nodeB = new ProblemMapGenerator.Node('A', new ProblemMapGenerator.Point(1, 0), new ProblemMapGenerator.Point(10, 0));
-    var nodeC = new ProblemMapGenerator.Node('C', new ProblemMapGenerator.Point(1, 1), new ProblemMapGenerator.Point(10, 10));
+    var nodeA = new ProblemMapGenerator.Node('0-0', new ProblemMapGenerator.Point(0, 0), new ProblemMapGenerator.Point(0, 0));
+    var nodeB = new ProblemMapGenerator.Node('1-0', new ProblemMapGenerator.Point(1, 0), new ProblemMapGenerator.Point(10, 0));
+    var nodeC = new ProblemMapGenerator.Node('1-1', new ProblemMapGenerator.Point(1, 1), new ProblemMapGenerator.Point(10, 10));
     
     nodeA.addChildNode(nodeB);
     nodeA.addChildNodes([nodeB, nodeC]);
