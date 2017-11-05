@@ -3,7 +3,7 @@
 ## Map
 ```javascript
     var map = new ProblemMapGenerator.Map({'cols': 2, 'rows': 2, 'width': 10, 'height': 10});
-    map.injectRandom(ProblemMapGenerator.random);
+    map.injectRandom(ProblemMapGenerator.Random);
     map.getNodes();
 ```
 ## Nodes
