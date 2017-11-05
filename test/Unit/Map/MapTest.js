@@ -119,7 +119,6 @@ suite('Map', function () {
     });
 
     suite('#randomizeChildNodes(parentNode)', function () {
-
         test('should remove randomized child nodes', function () {
             let node = new MapNode('0 - 0', new Point(0, 0), new Point(2.5, 2.5));
             node.addChildNodes([new MapNode('1 - 0', new Point(0, 0), new Point(2.5, 2.5)), new MapNode('1 - 1', new Point(0, 0), new Point(2.5, 2.5))]);
@@ -136,7 +135,6 @@ suite('Map', function () {
 
             assert.sameDeepMembers(node.childs, [new MapNode('1 - 0', new Point(0, 0), new Point(2.5, 2.5))]);
         });
-
     });
 
     suite('#randomizeNodes()', function () {
@@ -182,6 +180,30 @@ suite('Map', function () {
 
             assert.equal(spy.callCount, 4);
 
+        });
+    });
+
+    suite('#getNodes()', function () {
+        test('should call buildMap and return all nodes if no node exists', function () {
+
+            let random = {getBetweenMinMax: sinon.stub()};
+            random.getBetweenMinMax.returns(1);
+
+            let map = new Map({'cols': 2, 'rows': 2, 'width': 10, 'height': 10});
+            map.injectRandom(random);
+
+            assert.lengthOf(map.getNodes(), 4);
+        });
+        test('should not call buildMap and return all nodes if nodes already exists', function () {
+
+            let random = {getBetweenMinMax: sinon.stub()};
+            random.getBetweenMinMax.returns(1);
+
+            let map = new Map({'cols': 2, 'rows': 2, 'width': 10, 'height': 10});
+            map.injectRandom(random);
+            map.buildMap();
+
+            assert.lengthOf(map.getNodes(), 4);
         });
     });
 
