@@ -13,7 +13,7 @@ map.getNodes(); // Returns the generated nodes
 {
     'cols': 2,   // horizontal number of nodes
     'rows': 2,   // vertical number of nodes
-    'width': 10, // Map with (e.g. pixel)
+    'width': 10, // Map width (e.g. pixel)
     'height': 10 // Map height (e.g. pixel)
 }
 ```
