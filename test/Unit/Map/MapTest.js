@@ -133,7 +133,7 @@ suite('Map', function () {
             map.calculateGutter();
             map.randomizeChildNodes(node);
 
-            assert.sameDeepMembers(node.childs, [new MapNode('1 - 0', new Point(0, 0), new Point(2.5, 2.5))]);
+            assert.sameDeepMembers(node.childs, [new MapNode('1 - 1', new Point(0, 0), new Point(2.5, 2.5))]);
         });
     });
 
