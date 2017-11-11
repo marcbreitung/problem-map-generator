@@ -1,6 +1,6 @@
 {
   "name": "problem-map-generator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "main": "dist/problem-map-generator.js",
   "module": "dist/problem-map-generator.js",
@@ -11,7 +11,7 @@
     "test": "nyc mocha --ui tdd --require babel-register test/**/*.js --reporter spec"
   },
   "author": "Marc Breitung",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
