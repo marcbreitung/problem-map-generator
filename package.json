@@ -9,10 +9,12 @@
     "url": "https://github.com/marcbreitung/problem-map-generator.git"
   },
   "scripts": {
-    "build": "npm run eslint && npm run test && npm run webpack",
+    "build": "npm run test && npm run webpack",
+    "test": "npm run eslint && npm run test-mocha",
     "webpack": "webpack --config webpack.config.js",
-    "eslint": "eslint -c .eslintrc.js lib/**/*.js",
-    "test": "nyc mocha --ui tdd --require babel-register test/**/*.js --reporter spec"
+    "eslint": "eslint lib/**/*.js",
+    "test-mocha": "nyc --reporter=lcov --reporter=text-lcov mocha --ui tdd --require babel-register test/**/*.js --reporter spec",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "author": "Marc Breitung",
   "license": "MIT",
@@ -23,6 +25,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
     "eslint": "^4.10.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.9.0",
@@ -31,6 +34,7 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "mocha": "^4.0.1",
+    "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^11.2.1",
     "sinon": "^4.1.1",
     "uglifyjs-webpack-plugin": "^1.0.1",
