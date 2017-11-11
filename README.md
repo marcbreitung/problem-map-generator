@@ -13,7 +13,7 @@ Include the [minified javascript](https://raw.githubusercontent.com/marcbreitung
 ```javascript
 var map = new ProblemMapGenerator.Map({'cols': 2, 'rows': 2, 'width': 10, 'height': 10});
 map.injectRandom(ProblemMapGenerator.Random);
-map.getNodes(); // Returns the generated nodes
+map.getNodes(); // Returns the generated nodes as array
 ```
 ### Properties
 ```javascript
