@@ -37,11 +37,17 @@ suite('Map', function () {
     });
 
     suite('#findNodeByPosition(position)', function () {
-        test('should return the node for the given point', function () {
+        test('should return the node for the given point (with default threshold)', function () {
             let map = new Map({'cols': 2, 'rows': 2, 'width': 10, 'height': 10});
             map.calculateGutter();
             map.addNodes();
             assert.deepEqual(map.findNodeByPosition(new Point(2.5, 7.5)), new MapNode('0 - 1', new Point(0, 1), new Point(2.5, 7.5)));
+        });
+        test('should return the node for the given point (with custom threshold)', function () {
+            let map = new Map({'cols': 2, 'rows': 2, 'width': 10, 'height': 10});
+            map.calculateGutter();
+            map.addNodes();
+            assert.deepEqual(map.findNodeByPosition(new Point(1.5, 6.5), 2), new MapNode('0 - 1', new Point(0, 1), new Point(2.5, 7.5)));
         });
     });
 
