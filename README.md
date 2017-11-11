@@ -1,6 +1,6 @@
 # Problem Map Generator
 
-Creates a graph with *N x M* nodes with nearest neighbors as child nodes and randomizes the node position and the number of child nodes. Useful for testing search problems. 
+Creates a graph with *N x M* nodes with nearest neighbors as child nodes and randomizes the node position and the number of child nodes. Useful for testing search problems. The id for every node is generated form the column and row and separated with a hyphen (e.g. '1-2').
 
 ## Map
 ```javascript
