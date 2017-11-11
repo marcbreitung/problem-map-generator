@@ -1,9 +1,13 @@
 {
   "name": "problem-map-generator",
   "version": "0.1.6",
-  "description": "",
+  "description": "Problem Map Generator",
   "main": "dist/problem-map-generator.js",
   "module": "dist/problem-map-generator.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcbreitung/problem-map-generator.git"
+  },
   "scripts": {
     "build": "npm run eslint && npm run test && npm run webpack",
     "webpack": "webpack --config webpack.config.js",
