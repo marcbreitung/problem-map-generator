@@ -14,7 +14,7 @@
     "webpack": "webpack --config webpack.config.js",
     "eslint": "eslint lib/**/*.js",
     "test-mocha": "nyc --reporter=lcov --reporter=text-lcov mocha --ui tdd --require babel-register test/**/*.js --reporter spec",
-    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "author": "Marc Breitung",
   "license": "MIT",
