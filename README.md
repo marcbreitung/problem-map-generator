@@ -1,8 +1,6 @@
 # Problem Map Generator
 
-[![Build Status](https://travis-ci.org/marcbreitung/problem-map-generator.svg?branch=master)](https://travis-ci.org/marcbreitung/problem-map-generator)
-
-[![Coverage Status](https://coveralls.io/repos/github/marcbreitung/problem-map-generator/badge.svg?branch=master)](https://coveralls.io/github/marcbreitung/problem-map-generator?branch=master)
+[![Build Status](https://travis-ci.org/marcbreitung/problem-map-generator.svg?branch=master)](https://travis-ci.org/marcbreitung/problem-map-generator) [![Coverage Status](https://coveralls.io/repos/github/marcbreitung/problem-map-generator/badge.svg?branch=master)](https://coveralls.io/github/marcbreitung/problem-map-generator?branch=master)
 
 Creates a graph with *column x row* nodes with nearest neighbors as child nodes and randomizes the node position and the number of child nodes. Useful for testing search problems. The id for every node is generated form the column and row and separated with a hyphen (e.g. '1-2').
 
