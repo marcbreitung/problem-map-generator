@@ -2,6 +2,13 @@
 
 Creates a graph with *column x row* nodes with nearest neighbors as child nodes and randomizes the node position and the number of child nodes. Useful for testing search problems. The id for every node is generated form the column and row and separated with a hyphen (e.g. '1-2').
 
+## Usage
+Include the [minified javascript](https://raw.githubusercontent.com/marcbreitung/problem-map-generator/master/dist/problem-map-generator.min.js) it in your HTML.
+
+```html
+<script src="js/problem-map-generator.min.js"></script>
+```
+
 ## Map
 ```javascript
 var map = new ProblemMapGenerator.Map({'cols': 2, 'rows': 2, 'width': 10, 'height': 10});
