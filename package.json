@@ -13,7 +13,7 @@
     "test": "npm run eslint && npm run test-mocha",
     "webpack": "webpack --config webpack.config.js",
     "eslint": "eslint lib/**/*.js",
-    "test-mocha": "nyc --reporter=lcov --reporter=text-lcov mocha --ui tdd --require babel-register test/**/*.js --reporter spec",
+    "test-mocha": "nyc --reporter=text --reporter=lcov --reporter=text-lcov mocha --ui tdd --require babel-register test/**/*.js --reporter spec",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "author": "Marc Breitung",
