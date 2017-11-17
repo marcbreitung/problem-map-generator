@@ -2,8 +2,8 @@
   "name": "problem-map-generator",
   "version": "0.1.6",
   "description": "Problem Map Generator",
-  "main": "dist/problem-map-generator.js",
-  "module": "dist/problem-map-generator.js",
+  "main": "dist/problem-map-generator.node.js",
+  "module": "dist/problem-map-generator.node.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/marcbreitung/problem-map-generator.git"
