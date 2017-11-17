@@ -10,6 +10,11 @@ Include the [minified javascript](https://raw.githubusercontent.com/marcbreitung
 ```html
 <script src="js/problem-map-generator.min.js"></script>
 ```
+Or use the [node module](https://raw.githubusercontent.com/marcbreitung/problem-map-generator/master/dist/problem-map-generator.node.min.js) version.
+
+```javascript
+var ProblemMapGenerator = require('problem-map-generator.node.min')
+```
 
 ## Map
 ```javascript
