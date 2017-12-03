@@ -32,7 +32,7 @@ suite('Map', function () {
             let map = new Map({'cols': 2, 'rows': 2, 'width': 10, 'height': 10});
             map.calculateGutter();
             map.addNodes();
-            assert.deepEqual(map.findNodeByPoint(new Point(1, 0)), new MapNode('1-0', new Point(1, 0), new Point(7.5, 2.5)));
+            assert.deepEqual(map.findNodeByPoint(new Point(1, 0)), new MapNode('1-0', new Point(1, 0), new Point(2.5, 7.5)));
         });
     });
 
@@ -41,13 +41,13 @@ suite('Map', function () {
             let map = new Map({'cols': 2, 'rows': 2, 'width': 10, 'height': 10});
             map.calculateGutter();
             map.addNodes();
-            assert.deepEqual(map.findNodeByPosition(new Point(2.5, 7.5)), new MapNode('0-1', new Point(0, 1), new Point(2.5, 7.5)));
+            assert.deepEqual(map.findNodeByPosition(new Point(2.5, 7.5)), new MapNode('1-0', new Point(1, 0), new Point(2.5, 7.5)));
         });
         test('should return the node for the given point (with custom threshold)', function () {
             let map = new Map({'cols': 2, 'rows': 2, 'width': 10, 'height': 10});
             map.calculateGutter();
             map.addNodes();
-            assert.deepEqual(map.findNodeByPosition(new Point(1.5, 6.5), 2), new MapNode('0-1', new Point(0, 1), new Point(2.5, 7.5)));
+            assert.deepEqual(map.findNodeByPosition(new Point(1.5, 6.5), 2), new MapNode('1-0', new Point(1, 0), new Point(2.5, 7.5)));
         });
     });
 
@@ -66,8 +66,8 @@ suite('Map', function () {
             map.addNodes();
             assert.sameDeepMembers(map.nodes, [
                     new MapNode('0-0', new Point(0, 0), new Point(2.5, 2.5)),
-                    new MapNode('0-1', new Point(0, 1), new Point(2.5, 7.5)),
-                    new MapNode('1-0', new Point(1, 0), new Point(7.5, 2.5)),
+                    new MapNode('0-1', new Point(0, 1), new Point(7.5, 2.5)),
+                    new MapNode('1-0', new Point(1, 0), new Point(2.5, 7.5)),
                     new MapNode('1-1', new Point(1, 1), new Point(7.5, 7.5))
                 ]
             );
