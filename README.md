@@ -22,15 +22,14 @@ var map = new ProblemMapGenerator.Map({'cols': 2, 'rows': 2, 'width': 10, 'heigh
 map.injectRandom(ProblemMapGenerator.Random);
 map.getNodes(); // Returns the generated nodes as array
 ```
-### Properties
-```javascript
-{
-    'cols': 2,   // horizontal number of nodes
-    'rows': 2,   // vertical number of nodes
-    'width': 10, // Map width (e.g. pixel)
-    'height': 10 // Map height (e.g. pixel)
-}
-```
+
+### Possible Attributes
+| Attribute | Type | Default Value | Description |
+| --- | --- | --- | --- |
+| `cols` | integer | `10` | number of nodes in x direction |
+| `rows` | integer | `10` | number of nodes in y direction |
+| `width` | integer | `100` | map width |
+| `height` | integer | `100` | map height |
 ### Nodes
 ```javascript
 var nodeA = new ProblemMapGenerator.Node('0-0', new ProblemMapGenerator.Point(0, 0), new ProblemMapGenerator.Point(0, 0));
