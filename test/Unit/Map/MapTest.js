@@ -32,7 +32,11 @@ suite('Map', function () {
             let map = new Map({'cols': 2, 'rows': 2, 'width': 10, 'height': 10});
             map.calculateGutter();
             map.addNodes();
-            assert.deepEqual(map.findNodeByPoint(new Point(1, 0)), new MapNode('1-0', new Point(1, 0), new Point(2.5, 7.5)));
+            assert.deepEqual(map.findNodeByPoint(new Point(1, 0)), new MapNode({
+                id: '1-0',
+                point: new Point(1, 0),
+                position: new Point(2.5, 7.5)
+            }));
         });
     });
 
@@ -41,13 +45,21 @@ suite('Map', function () {
             let map = new Map({'cols': 2, 'rows': 2, 'width': 10, 'height': 10});
             map.calculateGutter();
             map.addNodes();
-            assert.deepEqual(map.findNodeByPosition(new Point(2.5, 7.5)), new MapNode('1-0', new Point(1, 0), new Point(2.5, 7.5)));
+            assert.deepEqual(map.findNodeByPosition(new Point(2.5, 7.5)), new MapNode({
+                id: '1-0',
+                point: new Point(1, 0),
+                position: new Point(2.5, 7.5)
+            }));
         });
         test('should return the node for the given point (with custom threshold)', function () {
             let map = new Map({'cols': 2, 'rows': 2, 'width': 10, 'height': 10});
             map.calculateGutter();
             map.addNodes();
-            assert.deepEqual(map.findNodeByPosition(new Point(1.5, 6.5), 2), new MapNode('1-0', new Point(1, 0), new Point(2.5, 7.5)));
+            assert.deepEqual(map.findNodeByPosition(new Point(1.5, 6.5), 2), new MapNode({
+                id: '1-0',
+                point: new Point(1, 0),
+                position: new Point(2.5, 7.5)
+            }));
         });
     });
 
@@ -65,10 +77,10 @@ suite('Map', function () {
             map.calculateGutter();
             map.addNodes();
             assert.sameDeepMembers(map.nodes, [
-                    new MapNode('0-0', new Point(0, 0), new Point(2.5, 2.5)),
-                    new MapNode('0-1', new Point(0, 1), new Point(7.5, 2.5)),
-                    new MapNode('1-0', new Point(1, 0), new Point(2.5, 7.5)),
-                    new MapNode('1-1', new Point(1, 1), new Point(7.5, 7.5))
+                    new MapNode({id: '0-0', point: new Point(0, 0), position: new Point(2.5, 2.5)}),
+                    new MapNode({id: '0-1', point: new Point(0, 1), position: new Point(7.5, 2.5)}),
+                    new MapNode({id: '1-0', point: new Point(1, 0), position: new Point(2.5, 7.5)}),
+                    new MapNode({id: '1-1', point: new Point(1, 1), position: new Point(7.5, 7.5)})
                 ]
             );
         });
@@ -126,8 +138,12 @@ suite('Map', function () {
 
     suite('#randomizeChildNodes(parentNode)', function () {
         test('should remove randomized child nodes', function () {
-            let node = new MapNode('0-0', new Point(0, 0), new Point(2.5, 2.5));
-            node.addChildNodes([new MapNode('1-0', new Point(0, 0), new Point(2.5, 2.5)), new MapNode('1-1', new Point(0, 0), new Point(2.5, 2.5))]);
+            let node = new MapNode({id: '0-0', point: new Point(0, 0), position: new Point(2.5, 2.5)});
+            node.addChildNodes([new MapNode({
+                id: '1-0',
+                point: new Point(0, 0),
+                position: new Point(2.5, 2.5)
+            }), new MapNode({id: '1-1', point: new Point(0, 0), position: new Point(2.5, 2.5)})]);
 
             let map = new Map({'cols': 2, 'rows': 2, 'width': 10, 'height': 10});
 
@@ -139,7 +155,11 @@ suite('Map', function () {
             map.calculateGutter();
             map.randomizeChildNodes(node);
 
-            assert.sameDeepMembers(node.childs, [new MapNode('1-1', new Point(0, 0), new Point(2.5, 2.5))]);
+            assert.sameDeepMembers(node.childs, [new MapNode({
+                id: '1-1',
+                point: new Point(0, 0),
+                position: new Point(2.5, 2.5)
+            })]);
         });
     });
 
