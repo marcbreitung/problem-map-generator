@@ -10,6 +10,13 @@ import {Random} from "../../../lib/Utils/Random";
 suite('Map', function () {
 
     suite('#constructor(parameters)', function () {
+        test('should set cols, rows, width and height default values', function () {
+            let map = new Map({});
+            assert.propertyVal(map, 'cols', 10);
+            assert.propertyVal(map, 'rows', 10);
+            assert.propertyVal(map, 'width', 100);
+            assert.propertyVal(map, 'height', 100);
+        });
         test('should set cols, rows, width and height attributes', function () {
             let map = new Map({'cols': 2, 'rows': 2, 'width': 10, 'height': 10});
             assert.propertyVal(map, 'cols', 2);
