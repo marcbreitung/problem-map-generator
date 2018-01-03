@@ -1,6 +1,6 @@
 {
   "name": "problem-map-generator",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Problem Map Generator",
   "main": "dist/problem-map-generator.node.js",
   "module": "dist/problem-map-generator.node.js",
