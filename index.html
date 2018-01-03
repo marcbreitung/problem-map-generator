@@ -8,5 +8,12 @@
 
 <script src="dist/problem-map-generator.min.js"></script>
 
+<script>
+    var map = new ProblemMapGenerator.Map({'cols': 100, 'rows': 100, 'width': 10, 'height': 10});
+    map.injectRandom(ProblemMapGenerator.Random);
+    var nodes = map.getNodes();
+    console.log(nodes);
+</script>
+
 </body>
 </html>
