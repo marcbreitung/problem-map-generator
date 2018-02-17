@@ -29,7 +29,6 @@ module.exports = {
         "callback-return": "error",
         "camelcase": "error",
         "capitalized-comments": "error",
-        "class-methods-use-this": "error",
         "comma-dangle": "error",
         "comma-spacing": [
             "error",
@@ -127,7 +126,6 @@ module.exports = {
         "no-extend-native": "error",
         "no-extra-bind": "error",
         "no-extra-label": "error",
-        "no-extra-parens": ["error", "all", {"nestedBinaryExpressions": false}],
         "no-floating-decimal": "error",
         "no-implicit-coercion": "error",
         "no-implicit-globals": "error",
@@ -141,15 +139,7 @@ module.exports = {
         "no-lonely-if": "error",
         "no-loop-func": "error",
         "no-magic-numbers": "off",
-        "no-mixed-operators": ["error", {
-            "groups": [
-                ["+", "-", "*", "/", "%", "**"],
-                ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
-                ["&&", "||"],
-                ["in", "instanceof"]
-            ],
-            "allowSamePrecedence": true
-        }],
+        "no-mixed-operators": "error",
         "no-mixed-requires": "error",
         "no-multi-assign": "error",
         "no-multi-spaces": "error",
