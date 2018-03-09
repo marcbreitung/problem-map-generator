@@ -9,10 +9,13 @@
 <script src="dist/problem-map-generator.min.js"></script>
 
 <script>
+    console.time('nodes');
     var map = new ProblemMapGenerator.Map({'cols': 100, 'rows': 100, 'width': 10, 'height': 10});
     map.injectRandom(ProblemMapGenerator.Random);
     var nodes = map.getNodes();
     console.log(nodes);
+    console.timeEnd('nodes');
+    // nodes: 5753.68896484375ms
 </script>
 
 </body>
