@@ -3,6 +3,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = [
     {
+        mode: 'production',
         entry: require.resolve('./lib/problem-map-generator.js'),
         output: {
             path: path.resolve(__dirname, 'dist'),
@@ -33,6 +34,7 @@ module.exports = [
         ]
     },
     {
+        mode: 'production',
         entry: require.resolve('./lib/problem-map-generator.js'),
         output: {
             path: path.resolve(__dirname, 'dist'),
